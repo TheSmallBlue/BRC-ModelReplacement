@@ -6,15 +6,21 @@ using System.IO;
 using HarmonyLib;
 using System.CodeDom;
 using UnityEngine.TextCore.Text;
+using BepInEx.Configuration;
 
 namespace ModelReplacement
 {
     [BepInPlugin(PluginInfo.PLUGIN_GUID, PluginInfo.PLUGIN_NAME, PluginInfo.PLUGIN_VERSION)]
     public class Plugin : BaseUnityPlugin
     {
+        public static ConfigEntry<int> configCharacterToReplace;
+        public static ConfigEntry<bool> configOverwriteShader;
 
         private void Awake()
         {
+            configCharacterToReplace = Config.Bind("General", "charaToReplace", -1, "Which character to replace, taken from the 'Characters' enum. See this image: https://files.catbox.moe/vhda8a.png");
+            configOverwriteShader = Config.Bind("General", "shaderOverwritten", false, "Whether or not we prioritize the shader you set to your material in the Unity editor or the base shader the game uses for outlines and cel-shading");
+
             SavedVariables.charaPrefab = SavedVariables.GetBundle().LoadAsset<GameObject>("Chara");
             // Plugin startup logic
             Logger.LogInfo($"Plugin {PluginInfo.PLUGIN_GUID} is loaded!");
@@ -25,10 +31,6 @@ namespace ModelReplacement
     }
 
     static class SavedVariables{
-
-        public static Characters characterToChange = Characters.ringdude;
-
-        public static bool overwriteDefaultTextures = false;
 
         public static GameObject charaPrefab;
 
@@ -51,7 +53,7 @@ namespace ModelReplacement
         {
             var log = BepInEx.Logging.Logger.CreateLogSource(nameof(FbxCreationPatcher));
 
-            if (character == SavedVariables.characterToChange)
+            if (character == (Characters)Plugin.configCharacterToReplace.Value)
             {
                 log.LogInfo("Character replaced!");
                 return CreateCompatibleGameObject(returnValue);
@@ -62,10 +64,6 @@ namespace ModelReplacement
 
         static GameObject CreateCompatibleGameObject(GameObject intendedReturnValue)
         {
-            var log = BepInEx.Logging.Logger.CreateLogSource(nameof(FbxCreationPatcher));
-            // TODO: Rename bones based on human bones, for now we name the bones manually
-            // TODO: Rename object with SkinnedMeshRenderer to "mesh"
-
             // Get the Chara prefab from our assetbundle
             Transform baseTransform = Object.Instantiate(SavedVariables.charaPrefab).transform; //SavedVariables.charaPrefab.transform;
 
@@ -94,11 +92,11 @@ namespace ModelReplacement
         static Material Postfix(Material returnValue, Characters character, int outfit, CharacterConstructor __instance)
         {
 
-            if (character == SavedVariables.characterToChange)
+            if (character == (Characters)Plugin.configCharacterToReplace.Value)
             {
                 Material targetMat = Object.Instantiate(SavedVariables.charaPrefab).GetComponentInChildren<SkinnedMeshRenderer>().material;
                 
-                if(!SavedVariables.overwriteDefaultTextures){
+                if(!Plugin.configOverwriteShader.Value){
                     targetMat.shader = returnValue.shader;
                 }
                 
