@@ -6,6 +6,7 @@
 * Phones not being on hands
 * Rollerblades not working at all
 * Jetpacks disconnected from the body
+* Cant have more than 1 character mod at a time
 
 
 Here's a video showing how you'd use this:
