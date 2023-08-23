@@ -1,0 +1,12 @@
+E:\Projects\Coding\Mods\BRC\ModelReplacement\obj\Debug\net46\ModelReplacement.csproj.AssemblyReference.cache
+E:\Projects\Coding\Mods\BRC\ModelReplacement\obj\Debug\net46\PluginInfo.cs
+E:\Projects\Coding\Mods\BRC\ModelReplacement\obj\Debug\net46\ModelReplacement.GeneratedMSBuildEditorConfig.editorconfig
+E:\Projects\Coding\Mods\BRC\ModelReplacement\obj\Debug\net46\ModelReplacement.AssemblyInfoInputs.cache
+E:\Projects\Coding\Mods\BRC\ModelReplacement\obj\Debug\net46\ModelReplacement.AssemblyInfo.cs
+E:\Projects\Coding\Mods\BRC\ModelReplacement\obj\Debug\net46\ModelReplacement.csproj.CoreCompileInputs.cache
+E:\Projects\Coding\Mods\BRC\ModelReplacement\bin\Debug\net46\ModelReplacement.dll
+E:\Projects\Coding\Mods\BRC\ModelReplacement\bin\Debug\net46\ModelReplacement.pdb
+E:\Projects\Coding\Mods\BRC\ModelReplacement\bin\Debug\net46\Assembly-CSharp.dll
+E:\Projects\Coding\Mods\BRC\ModelReplacement\obj\Debug\net46\ModelReplacement.csproj.CopyComplete
+E:\Projects\Coding\Mods\BRC\ModelReplacement\obj\Debug\net46\ModelReplacement.dll
+E:\Projects\Coding\Mods\BRC\ModelReplacement\obj\Debug\net46\ModelReplacement.pdb
