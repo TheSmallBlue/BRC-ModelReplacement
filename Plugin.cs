@@ -116,7 +116,7 @@ namespace ModelReplacement
     class InlineSkatesLoaderPatch{
         static void Postfix(CharacterVisual.MoveStylePropMode mode, PlayerMoveStyleProps ___moveStyleProps, CharacterVisual __instance){
             
-            if(mode == CharacterVisual.MoveStylePropMode.ACTIVE){
+            if(mode == CharacterVisual.MoveStylePropMode.ACTIVE && __instance.transform.GetChild(0).name.Contains("Chara")){
                 ___moveStyleProps.skateL.transform.localRotation = Quaternion.Euler(0, 0, Plugin.inlineSkatesRot.Value);
                 ___moveStyleProps.skateR.transform.localRotation = Quaternion.Euler(0, 0, Plugin.inlineSkatesRot.Value);
             }
