@@ -14,3 +14,12 @@ Here's a video showing how you'd use this:
 [![Very rough video](https://img.youtube.com/vi/mJTtzr91Oyg/0.jpg)](https://www.youtube.com/watch?v=mJTtzr91Oyg)
 
 [Here](https://drive.google.com/file/d/1FS3j6mCnOJPunOKtfoar534KVtTnwWWz/view?usp=sharing)'s an example of a character mod made using this
+
+# FAQ
+
+* "In-game, the model's outline is huge"
+* See this:
+
+
+![image](https://github.com/TheSmallBlue/BRC-ModelReplacement/assets/24967815/ff537217-5f0e-425b-9bcc-abfa7bf25fe6)
+
