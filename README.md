@@ -2,10 +2,6 @@
  A mod to make player-model replacement in Bomb Rush Cyberfunk easier
 
  Keep in mind this is very early on and contains a bunch of issues, like:
-* IK breaking sometimes
-* Phones not being on hands
-* Rollerblades not working at all
-* Jetpacks disconnected from the body
 * Cant have more than 1 character mod at a time
 
 
