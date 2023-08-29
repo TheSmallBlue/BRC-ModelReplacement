@@ -2,3 +2,4 @@
 /bin
 /obj
 .fake
+lib/Assembly-CSharp.dll
