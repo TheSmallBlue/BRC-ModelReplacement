@@ -99,7 +99,7 @@ namespace ModelReplacement
 
             if (character == (Characters)Plugin.configCharacterToReplace.Value)
             {
-                Material targetMat = SavedVariables.charaPrefab.GetComponentInChildren<SkinnedMeshRenderer>().material;
+                Material targetMat =  Object.Instantiate(SavedVariables.charaPrefab.GetComponentInChildren<SkinnedMeshRenderer>().material);
                 
                 if(!Plugin.configOverwriteShader.Value){
                     targetMat.shader = returnValue.shader;
