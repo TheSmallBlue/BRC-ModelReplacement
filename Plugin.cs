@@ -83,6 +83,9 @@ namespace ModelReplacement
             // Set the animator to the intended character's
             baseTransform.GetComponent<Animator>().runtimeAnimatorController = intendedReturnValue.GetComponent<Animator>().runtimeAnimatorController;
 
+            // Spooky ghosts begone
+            GameObject.Destroy(intendedReturnValue);
+
             return baseTransform.gameObject;
         }
     }
@@ -96,7 +99,7 @@ namespace ModelReplacement
 
             if (character == (Characters)Plugin.configCharacterToReplace.Value)
             {
-                Material targetMat = Object.Instantiate(SavedVariables.charaPrefab).GetComponentInChildren<SkinnedMeshRenderer>().material;
+                Material targetMat = SavedVariables.charaPrefab.GetComponentInChildren<SkinnedMeshRenderer>().material;
                 
                 if(!Plugin.configOverwriteShader.Value){
                     targetMat.shader = returnValue.shader;
