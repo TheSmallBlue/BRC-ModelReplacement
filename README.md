@@ -20,6 +20,9 @@ Here's a video showing how you'd use this:
 * Go into your FBX in your assets folder, and go into the model tab, on the top you'll see a "Scale factor" option. Change it to a larger number.
 After doing this, delete the old character from the Chara prefab, and re-add the fbx (unpacking and organizing just as before). When adding the spraycan or phone again, they should look better!
 
+* ### "My attacks dont work on police officers / enemies!!"
+* My bad, I assumed this wasnt used for anything so I ommited it in the tutorial: __Make sure to rename your lower leg bones to "leg2r" and "leg2l" respectively!__
+
 
 
 
