@@ -1,15 +1,16 @@
 # BRC-ModelReplacement
  A mod to make player-model replacement in Bomb Rush Cyberfunk easier
 
- Keep in mind this is very early on and contains a bunch of issues, like:
-* Cant have more than 1 character mod at a time
-
-
+ # This mod will not get any new updates. For more features, please use [SGiygas' mod](https://github.com/SGiygas/BrcCustomCharacters) instead
+ 
 Here's a video showing how you'd use this:
 
 [![Very rough video](https://img.youtube.com/vi/BoFOzLmoFgA/0.jpg)](https://www.youtube.com/watch?v=BoFOzLmoFgA)
 
 # FAQ
+
+* ### Are multiple custom characters a thing yet?
+* As of the latest version, they are! You can follow the same steps shown in the video above, then follow the steps in [This guide](https://github.com/TheSmallBlue/BRC-ModelReplacement/wiki/How-to-convert-an-old-version-of-the-mod-to-the-new-one-to-have-multiple-character-support)
 
 * ### "In-game, the model's outline is huge"
 * See this:
