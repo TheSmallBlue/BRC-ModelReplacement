@@ -29,10 +29,10 @@ namespace ModelReplacement
         public static void LoadConfigValues(){
             List<string> subfolders = Directory.GetDirectories(Path.Combine(Paths.PluginPath, "ModelReplacement")).ToList();
 
-            subfolders.Remove("Template");
-
             foreach (string folder in subfolders)
             {
+                if(folder.Contains("Template")) return;
+                
                 string[] configFiles = Directory.GetFiles(folder,"*.cfg");
 
                 string[] assetFiles = Directory.GetFiles(folder, "*.asset");
